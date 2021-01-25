@@ -5,8 +5,8 @@ class Show < ActiveRecord::Base
   end
 
   def self.most_popular_show
-    # self.order("rating DESC").limit(1)
-    self.where("rating = ?", self.highest_rating).first
+    self.order("rating DESC").first
+    # self.where("rating = ?", self.highest_rating).first
   end
 
   def self.lowest_rating
